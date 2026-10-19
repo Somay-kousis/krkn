@@ -247,6 +247,7 @@ class NodeActionsScenarioPlugin(AbstractScenarioPlugin):
             pool.close()
         except Exception as e:
             logging.info("Error on pool multiprocessing: " + str(e))
+            raise
 
     def run_node(self, single_node, node_scenario_object, action, node_scenario):
         # Get the scenario specifics for running action nodes
